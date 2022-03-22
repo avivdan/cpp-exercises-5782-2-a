@@ -4,22 +4,23 @@
 namespace ariel{
 
     class Notebook{
-        
+        const short returnNull = 0;
+        const std::string returnNONE = "";
         unsigned int pages, rows, cols;
         std::vector<std::vector<std::vector<char>>> notebook;
 // Notebook
         public:
             // Constructors
             Notebook();
-            Notebook(unsigned int pages, unsigned int rows, unsigned int cols);
-            Notebook(unsigned int size);
+            // Notebook(unsigned int pages, unsigned int rows, unsigned int cols);
+            // Notebook(unsigned int size);
 
             // Destructor
             ~Notebook();
 
             // This method will get page, row, column, direction and a message as parameters and write the message in the 
             // appropriate location and direction in this notebook
-            int write(unsigned int page, unsigned int row, unsigned int col, Direction dir, std::string msg);
+            int write(unsigned int page, unsigned int row, unsigned int col, Direction dir, const std::string &msg) const;
 
             // This method get row, column, direction and length of a message as parameters and returns the message in the 
             // appropriate location and direction in this notebook

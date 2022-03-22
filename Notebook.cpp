@@ -1,9 +1,7 @@
-#include "Direction.hpp"
 #include "Notebook.hpp"
+#include "Direction.hpp"
 #include <string>
 #include <vector>
-using namespace std;
-
 namespace ariel
 {   
 
@@ -17,12 +15,12 @@ namespace ariel
 
     Notebook::~Notebook(){}
 
-    int Notebook::write(unsigned int page, unsigned int row, unsigned int col, Direction dir, std::string msg){
-        return 0;
+    int Notebook::write(unsigned int page, unsigned int row, unsigned int col, Direction dir, const std::string &msg) const{
+        return returnNull;
     }
 
     std::string Notebook::read(unsigned int page, unsigned int row, unsigned int col, Direction dir, unsigned int len){
-        return "";
+        return returnNONE;
     }
 
     void Notebook::erase(unsigned int page, unsigned int row, unsigned int col, Direction dir,  unsigned int len){}
